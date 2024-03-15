@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Peixe Grelhado",
     "rate": "5.0",
-    "img": "/assets/img/food1.png",
+    "img": "./assets/img/food1.png",
     "price": "R$35",
     "description": "Deliciosamente grelhado, o salmão selvagem do Alasca é acompanhado por uma seleção de legumes sazonais. Sua carne suculenta é realçada pela doçura da abobrinha grelhada e pela textura sedosa do brócolis. O contraste entre os vegetais crocantes e a maciez do peixe cria uma experiência gastronômica única, celebrando os sabores frescos da estação."
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Bife com Fritas",
     "rate": "4.8",
-    "img": "/assets/img/food2.png",
+    "img": "./assets/img/food2.png",
     "price": "R$25",
     "description": "Um bife suculento grelhado, acompanhado de batatas rústicas crocantes e uma salada fresca de folhas temperadas. Esta combinação simples e deliciosa oferece uma refeição satisfatória, com sabores clássicos e frescos que se complementam perfeitamente."
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Festim Sabores",
     "rate": "5.0",
-    "img": "/assets/img/food3.png",
+    "img": "./assets/img/food3.png",
     "price": "R$84",
     "description": "Este prato diversificado combina arroz branco, grão-de-bico, pão árabe e cinco ingredientes surpresa, proporcionando uma experiência gastronômica emocionante e repleta de sabores únicos."
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Porco Agridoce",
     "rate": "4.5",
-    "img": "/assets/img/food4.png",
+    "img": "./assets/img/food4.png",
     "price": "R$36",
     "description": "Este prato apresenta fatias suculentas de carne de porco em um molho agridoce, acompanhadas de hashis para uma experiência asiática autêntica. O molho vermelho adiciona um sabor rico à carne, enquanto os legumes frescos oferecem um contraste vibrante. Cada mordida proporciona uma explosão de sabores orientais."
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "name": "Frutos do Mar",
     "rate": "4.6",
-    "img": "/assets/img/food5.png",
+    "img": "./assets/img/food5.png",
     "price": "R$90",
     "description": "Este prato oferece uma seleção fresca de frutos do mar, incluindo camarões e mariscos, em um molho cítrico refrescante. O aroma do limão permeia cada garfada, realçando os sabores naturais dos frutos do mar. Fatias de tomate fresco adicionam um toque de acidez e cor, completando a experiência gastronômica com um toque de frescura."
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Refrescância",
     "rate": "5.0",
-    "img": "/assets/img/food6.png",
+    "img": "./assets/img/food6.png",
     "price": "R$40",
     "description": "Esta salada é uma explosão de frescor e sabor, combinando uma variedade de vegetais crocantes, incluindo alface, agrião, e fatias de maçã refrescantes. As nozes adicionam uma textura crocante e um sabor rico, enquanto a doçura natural das maçãs complementa perfeitamente o mix de vegetais. Regada com um molho leve, esta salada é uma opção deliciosa e nutritiva para qualquer refeição."
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Primavera",
     "rate": "4.5",
-    "img": "/assets/img/food7.png",
+    "img": "./assets/img/food7.png",
     "price": "R$60",
     "description": "Uma mistura fresca de folhas verdes, batatas douradas e berinjela caramelizada é complementada por fatias de tomate Roma. Decore com brotos de cebola branca, ervas frescas e pétalas de flores comestíveis. Tempere com vinagre de marmelo e azeite extra virgem."
   }

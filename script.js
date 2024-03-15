@@ -56,7 +56,7 @@ function menu() {
 
 //Iterar os dados do JSON e criar os cards
 function addCardsFood() {
-    fetch('foods.json')
+    fetch('./assets/data/foods.json')
     .then(response => response.json())
     .then(data => {
         const cardsContainer = document.querySelector('.cards');
