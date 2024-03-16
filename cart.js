@@ -1,18 +1,21 @@
-
 function initCart() {
     const cartItems = document.getElementById('cart_items')
     const cartTotal = document.getElementById('cart_total')
     const cartContainer = document.querySelector('.cart_container')
+    const headerCart = document.querySelector('#header_cart')
     const cartEmptyMessage = document.createElement('p')
+    const successMessage = document.getElementById('success_message') 
+    const header = document.querySelector('header')
+
     cartEmptyMessage.textContent = 'O carrinho está vazio'
     cartEmptyMessage.classList.add('cart_empty_message')
-    cartContainer.appendChild(cartEmptyMessage)
-
-    const successMessage = document.getElementById('success_message') 
+    cartContainer.insertBefore(cartEmptyMessage, headerCart.nextSibling);
 
     const cart = []
 
     function updateCartUI() {
+        const aside = document.querySelector('aside')
+
         cartItems.innerHTML = ''
         let total = 0
         if (cart.length === 0) {
@@ -24,11 +27,14 @@ function initCart() {
             cart.forEach(item => {
                 const li = document.createElement('li')
                 li.innerHTML = `
-                    <span class="name_food">${item.name}: </span>
-                    <button class="decrease" data-name="${item.name}">-</button>
-                    <span>${item.quantity}</span>
-                    <button class="increase" data-name="${item.name}">+</button>
-                    <span> - Total: R$ ${(item.price * item.quantity).toFixed(2)}</span>
+                    <img class="photo" src="${item.photo}">
+                    <span class="name_food">${item.name}</span>
+                    <span id="quant">
+                        <button class="decrease" data-name="${item.name}">-</button>
+                        <span class="number_quant">${item.quantity}</span>
+                        <button class="increase" data-name="${item.name}">+</button>
+                    </span>
+                    <span>Total: R$ ${(item.price * item.quantity).toFixed(2)}</span>
                 `
                 cartItems.appendChild(li)
                 total += item.price * item.quantity
@@ -37,9 +43,12 @@ function initCart() {
         cartTotal.textContent = `Total: R$ ${total.toFixed(2)}`
 
         if (cart.length > 0) {
-            cartContainer.classList.add('show')
+            aside.classList.add('show')
+            header.classList.add('show_header')
         } else {
-            cartContainer.classList.remove('show')
+            aside.classList.remove('show')
+            header.classList.remove('show_header')
+
         }
     }
 
@@ -95,11 +104,14 @@ function initCart() {
         const cartIcons = document.querySelectorAll('.cart')
         const shopIcons = document.querySelectorAll('.shop')
         const finishOrderButton = document.getElementById('finish_order')
+        const closeCart = document.querySelectorAll('.close_cart')[0]
+        const aside = document.querySelector('aside')
 
         buyButton.addEventListener('click', () => {
             const name = document.querySelector('#title').textContent
             const price = parseFloat(document.querySelector('#price_cont').textContent.replace('R$', ''))
-            const food = { name, price }
+            const photo = document.querySelector('#poster').src
+            const food = { name, price, photo }
             addToCart(food)
         })
 
@@ -108,17 +120,20 @@ function initCart() {
                 const card = icon.parentElement.parentElement
                 const name = card.querySelector('h5').textContent
                 const price = parseFloat(card.querySelector('h4').textContent.replace('R$', ''))
-                const food = { name, price }
+                const photo = card.querySelector('img').src
+                const food = { name, price, photo }
                 addToCart(food)
             })
         })
 
         shopIcons.forEach(icon => {
             icon.addEventListener('click', () => {
-                if (cartContainer.classList.contains('show')) {
-                    cartContainer.classList.remove('show')
+                if (aside.classList.contains('show')) {
+                    aside.classList.remove('show')
+                    header.classList.remove('show_header')
                 } else {
-                    cartContainer.classList.add('show')
+                    aside.classList.add('show')
+                    header.classList.add('show_header')
                 }
             })
         })
@@ -138,12 +153,14 @@ function initCart() {
                 decreaseQuantity(name)
             }
         })
+
+        closeCart.addEventListener('click', () => {
+            aside.classList.remove('show')
+            header.classList.remove('show_header')
+        })
     }
 
     initializeCart()
 }
-
-
-
 
 export { initCart };
