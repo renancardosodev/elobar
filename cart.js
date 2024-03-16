@@ -6,6 +6,7 @@ function initCart() {
     const cartEmptyMessage = document.createElement('p')
     const successMessage = document.getElementById('success_message') 
     const header = document.querySelector('header')
+    const home = document.querySelector('#home')
 
     cartEmptyMessage.textContent = 'O carrinho está vazio'
     cartEmptyMessage.classList.add('cart_empty_message')
@@ -45,9 +46,12 @@ function initCart() {
         cartTotal.textContent = `Total: R$ ${total.toFixed(2)}`
 
         if (cart.length > 0) {
+            home.classList.add('show_home')
             aside.classList.add('show')
             header.classList.add('show_header')
+
         } else {
+            home.classList.remove('show_home')
             aside.classList.remove('show')
             header.classList.remove('show_header')
 
@@ -131,9 +135,11 @@ function initCart() {
         shopIcons.forEach(icon => {
             icon.addEventListener('click', () => {
                 if (aside.classList.contains('show')) {
+                    home.classList.remove('show_home')
                     aside.classList.remove('show')
                     header.classList.remove('show_header')
                 } else {
+                    home.classList.add('show_home')
                     aside.classList.add('show')
                     header.classList.add('show_header')
                 }
@@ -157,6 +163,7 @@ function initCart() {
         })
 
         closeCart.addEventListener('click', () => {
+            home.classList.remove('show_home')
             aside.classList.remove('show')
             header.classList.remove('show_header')
         })

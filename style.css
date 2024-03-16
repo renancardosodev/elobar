@@ -167,7 +167,7 @@ header .left_menu a:hover {
 
 header #home {
   width: 97%;
-  height: 90%;
+  /* height: 90%; */
 }
 
 header #home .content {
@@ -363,7 +363,6 @@ header #home .social .icons a {
   transition: 0.3s linear;
 }
 
-
 /* ______________CARRINHO_______________ */
 aside {
   display: flex;
@@ -474,7 +473,7 @@ aside {
 }
 
 .description_cart {
-    display: flex;
+  display: flex;
 }
 
 #cart_total {
@@ -492,73 +491,73 @@ aside {
   width: 110px;
 }
 
-
 @media screen and (max-width: 1260px) {
-    aside {
-        bottom: 0;
-        height: auto;
-        width: 100vw;
-    }
+  aside {
+    bottom: 0;
+    height: auto;
+    width: 100vw;
+  }
 
-    .cart_container,
-    #success_message {
-        height: auto;
-    }
+  .cart_container,
+  #success_message {
+    height: auto;
+  }
 
-    #body_cart {
-        display: flex;
-    }
+  #body_cart {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    #cart_items {
-        width: auto;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        overflow-x: auto;
-        transition: 1s linear;
-    }
+  #cart_items {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    transition: 1s linear;
+  }
 
-    #cart_items li {
-        flex-direction: row;
-        gap: 8px;
-        font-size: 1.4rem;
-    }
+  #cart_items li {
+    flex-direction: row;
+    gap: 8px;
+    font-size: 1.4rem;
+  }
 
-    #cart_items li img {
-        margin-right: 0;
-        margin-top: 10px;
-        width: 100px;
-    }
+  #cart_items li img {
+    margin-right: 0;
+    margin-top: 10px;
+    width: 80px;
+  }
 
-    #cart_items li .name_food {
-        text-align: center;
-    }
+  #cart_items li .name_food {
+    text-align: center;
+  }
 
-    .description_cart {
-        flex-direction: column;
-        gap: 15px;
-        margin-right: 60px;
-    }
+  .description_cart {
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 60px;
+  }
 
-    #cart_total {
-        text-align: center;
-        margin: 0;
-    }
+  #cart_total {
+    text-align: center;
+    margin: 0;
+  }
 
-    #total {
-        margin: 10px 0 0 30px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        min-width:140px;
-    }
+  #total {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 140px;
+  }
 
-    #finish_order {
-        width: 100%;
-        padding: 20px 0;
-    }
+  #finish_order {
+    width: 100%;
+    padding: 12px 0;
+  }
 
-    header {
+  header {
     width: 75%;
   }
 
@@ -578,29 +577,54 @@ aside {
 }
 
 @media screen and (max-width: 760px) {
-    header .logo {
-        left: 13%;
-    }
+  header .logo {
+    left: 13%;
+  }
 
-    header #home {
-        width: 92%;
-    }
+  header #home {
+    width: 92%;
+  }
 
   header nav .right_menu ul li {
     padding: 3px 6px;
   }
-  
+
   header #home .cards {
     margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 685px) {
-    header {
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-      }
+  body {
+    flex-direction: column;
+  }
+
+  #home {
+    position: absolute;
+    top: 42%;
+    width: 87% !important;
+  }
+
+  #home.show_home {
+    position: absolute;
+    top: 55%;
+  }
+
+  header {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+  }
+
+  header.show_header {
+    transform: translate(0, 0%);
+  }
+
+  aside {
+    position:static;
+    width: 100%;
+    margin: 0;
+  }
 
   header nav .right_menu ul {
     position: absolute;
@@ -616,14 +640,13 @@ aside {
   }
 
   header .logo {
-    left: 30%;
+    left: 33%;
   }
 
   header #home .content {
     left: 0;
     margin-left: 20px;
     margin-right: 20px;
-    top: 38%;
   }
 
   header #home .content #description {
@@ -636,27 +659,15 @@ aside {
     font-weight: 500;
   }
 
-  header #home .cards {
-    top: 43%;
-    margin-top: 0;
-  }
-
   header #home .social {
-    top: 45%;
+    padding-bottom: 1px;
+    top: 0;
   }
 }
 
 @media screen and (max-width: 500px) {
   header .logo {
     left: 27%;
-  }
-
-  header #home .content {
-    top: 33%;
-  }
-
-  header #home .cards {
-    top: 40%;
   }
 }
 
@@ -666,36 +677,9 @@ aside {
     left: 25%;
   }
 
-  header .logo img {
-    width: 305px;
-    margin: 45px 0 0 0px;
-  }
-
-  header #home .content {
-    top: 40%;
-  }
-  
-  header #home .cards {
-    top: 45%;
-  }
-
   header #home .content h2 {
     font-size: 3.4rem;
     margin-bottom: 15px;
   }
 }
 
-
-@media screen and (max-width: 360px) {
-    header .logo {
-      width: 180px;
-    }
-  
-    header #home .content {
-      top: 45%;
-    }
-    
-    header #home .cards {
-      top: 50%;
-    }
-}
