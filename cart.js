@@ -28,13 +28,15 @@ function initCart() {
                 const li = document.createElement('li')
                 li.innerHTML = `
                     <img class="photo" src="${item.photo}">
-                    <span class="name_food">${item.name}</span>
-                    <span id="quant">
-                        <button class="decrease" data-name="${item.name}">-</button>
-                        <span class="number_quant">${item.quantity}</span>
-                        <button class="increase" data-name="${item.name}">+</button>
+                    <span class="description_cart">
+                        <span class="name_food">${item.name}</span>
+                        <span class="quant">
+                            <button class="decrease" data-name="${item.name}">-</button>
+                            <span class="number_quant">${item.quantity}</span>
+                            <button class="increase" data-name="${item.name}">+</button>
+                        </span>
+                        <span>Total: R$ ${(item.price * item.quantity).toFixed(2)}</span>
                     </span>
-                    <span>Total: R$ ${(item.price * item.quantity).toFixed(2)}</span>
                 `
                 cartItems.appendChild(li)
                 total += item.price * item.quantity
