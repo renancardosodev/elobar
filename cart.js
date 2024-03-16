@@ -14,8 +14,9 @@ function initCart() {
 
     const cart = []
 
-    function updateCartUI() {
+    function updateCartUI(changeQuant=true) {
         const aside = document.querySelector('aside')
+        const listCartItens = document.querySelector('#cart_items')
 
         cartItems.innerHTML = ''
         let total = 0
@@ -42,6 +43,9 @@ function initCart() {
                 cartItems.appendChild(li)
                 total += item.price * item.quantity
             })
+            if(changeQuant) {
+                listCartItens.scrollLeft = listCartItens.scrollWidth - listCartItens.clientWidth;
+            }
         }
         cartTotal.textContent = `Total: R$ ${total.toFixed(2)}`
 
@@ -78,7 +82,7 @@ function initCart() {
         const item = cart.find(item => item.name === name)
         if (item) {
             item.quantity++
-            updateCartUI()
+            updateCartUI(false)
         }
     }
 
@@ -89,7 +93,7 @@ function initCart() {
             if (item.quantity === 0) {
                 removeFromCart(name)
             } else {
-                updateCartUI()
+                updateCartUI(false)
             }
         }
     }
