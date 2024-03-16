@@ -498,7 +498,7 @@ aside {
 }
 
 .name_food {
-  width: 110px;
+  width: 120px;
 }
 
 @media screen and (max-width: 1260px) {
@@ -582,6 +582,8 @@ aside {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    min-width: 25%;
+    padding-left: 20px;
   }
 
   #finish_order {
