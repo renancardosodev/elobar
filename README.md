@@ -1,10 +1,10 @@
-<img src="assets/img/Banner-desenvolvedor.png">
+<img src="assets/img/screen/Banner_screen.png">
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/renancardosodev/elobar/blob/main/LICENSE)
 
 ## Access the Project
 
-https://renancardosodev.github.io/elobar/
+<a href="https://renancardosodev.github.io/elobar/" target="_blank">https://renancardosodev.github.io/elobar/</a>
 
 ## Description
 
@@ -40,9 +40,10 @@ If you want to contribute to the development of this project, follow the steps b
 
 ## Screenshots
 
+
 <div style="display: flex; justify-content: space-between;">
-  <img src="assets/img/screenshot1.png" alt="Screenshot 1" width="48%">
-  <img src="assets/img/screenshot2.png" alt="Screenshot 2" width="48%">
+  <img src="assets/img/screen/screen_02.png" alt="Screenshot 2" width="48%">
+  <img src="assets/img/screen/screen_03.png" alt="Screenshot 3" width="48%">
 </div>
 
 ## Development Environment
